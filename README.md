@@ -2,8 +2,8 @@
 
 Smartlook Web API client for PHP. 
 
-* [Web API documentation](https://www.getsmartlook.com/doc/api/) This is documentation of the Smartlook Web API.
-* [Methods overview](https://www.getsmartlook.com/doc/methods/) Smartlook Web API methods overview.
+* [Web API documentation](https://www.getsmartlook.com/doc/api/)
+* [Methods overview](https://www.getsmartlook.com/doc/methods/)
 
 
 ## Installation
