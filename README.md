@@ -1,8 +1,8 @@
-# smartlook-php
+# smartlook-webapi-php
 
 Smartlook Web API client for PHP. 
 
-* [API documentation](https://www.getsmartlook.com/doc/api/) This is documentation of the Smartlook Web API.
+* [Web API documentation](https://www.getsmartlook.com/doc/api/) This is documentation of the Smartlook Web API.
 * [Methods overview](https://www.getsmartlook.com/doc/methods/) Smartlook Web API methods overview.
 
 
@@ -11,17 +11,18 @@ Smartlook Web API client for PHP.
 The best way to install is using  [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require smartlook/api
+$ composer require smartlook/webapi
 ```
 
 
 ## Usage
 
 ```php
-$api = new \Smartlook\Api\Client();
+$api = new \Smartlook\Webapi\Client();
 $api->authenticate(YOUR_API_KEY);
 $response = $api->call(API_METHOD, API_PARAMS); // returns array
 ```
+
 * `API_METHOD` is method name, see [methods overview](https://www.getsmartlook.com/doc/methods/)
 * `API_PARAMS` is array of params
 * $response is always array
@@ -30,12 +31,18 @@ $response = $api->call(API_METHOD, API_PARAMS); // returns array
 
 ## Nette
 
-Add Smartlook API key to your parameters in your config.neon:
+Register extension in your config.neon:
 
 ```neon
-parameters:
-    smartlook:
-    	apiKey: YOUR_API_KEY
+extensions:
+	smartlook: Smartlook\Webapi\SmartlookExtension
+```
+
+Add API key to your configs:
+
+```neon
+smartlook:
+	apiKey: YOUR_API_KEY
 ```
 
 Then you have api connection as service available by DI.

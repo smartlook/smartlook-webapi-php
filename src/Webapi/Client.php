@@ -1,8 +1,8 @@
 <?php
 
-namespace Smartlook\Api;
+namespace Smartlook\Webapi;
 
-class Connection
+class Client
 {
 
 	/** @var string */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Smartlook;
+namespace Smartlook\Webapi;
 
 use Nette;
 
@@ -18,7 +18,7 @@ class SmartlookExtension extends Nette\DI\CompilerExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('api'))
-			->setClass('Smartlook\Api\Client')
+			->setClass('Smartlook\Webapi\Client')
 			->addSetup('$apiKey', array($config['apiKey']))
 			->addSetup('$apiUrl', array($config['apiUrl']));
 	}
