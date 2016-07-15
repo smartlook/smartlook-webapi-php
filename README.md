@@ -25,8 +25,8 @@ $response = $api->call(API_METHOD, API_PARAMS); // returns array
 
 * `API_METHOD` is method name, see [methods overview](https://www.getsmartlook.com/doc/methods/)
 * `API_PARAMS` is array of params
-* $response is always array
-* every response has property "ok"
+* `$response` is always array
+* every response has property `ok`
 
 
 ## Nette
