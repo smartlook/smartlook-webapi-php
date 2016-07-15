@@ -35,7 +35,7 @@ Register extension in your config.neon:
 
 ```neon
 extensions:
-	smartlook: Smartlook\Webapi\SmartlookExtension
+	smartlook: Smartlook\Webapi\WebapiExtension
 ```
 
 Add API key to your configs:

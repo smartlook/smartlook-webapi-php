@@ -4,7 +4,7 @@ namespace Smartlook\Webapi;
 
 use Nette;
 
-class SmartlookExtension extends Nette\DI\CompilerExtension
+class WebapiExtension extends Nette\DI\CompilerExtension
 {
 
 	public $defaults = array(
