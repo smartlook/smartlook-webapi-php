@@ -1,0 +1,17 @@
+{
+    "name": "smartlook/api",
+    "type": "library",
+    "keywords": ["api", "client"],
+    "authors": [{
+        "name": "Dusan Kmet",
+        "email": "dusan@smartsupp.com"
+    }],
+    "description" : "Smartlook API client for PHP.",
+    "require": {
+        "php": ">=5.4.0",
+        "nette/di": "^2.3"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
