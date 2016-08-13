@@ -13,7 +13,8 @@ class WebapiExtension extends Nette\DI\CompilerExtension
 	);
 
 
-	public function loadConfiguration() {
+	public function loadConfiguration()
+	{
 		$config = $this->getConfig($this->defaults);
 		$builder = $this->getContainerBuilder();
 
