@@ -2,6 +2,19 @@
 
 namespace Smartlook\Webapi;
 
+/**
+ * Class Client
+ * @package Smartlook\Webapi
+ * @method smartlookCreate(array $params)
+ * @method accountGet()
+ * @method accountUpdate(array $params)
+ * @method accountDelete(array $params)
+ * @method projectsCreate(array $params)
+ * @method projectsUpdate(array $params)
+ * @method sessionsGet(array $params)
+ * @method sessionsUpdate(array $params)
+ * @method sessionsList(array $params)
+ */
 class Client
 {
 
