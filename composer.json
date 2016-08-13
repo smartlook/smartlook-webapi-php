@@ -8,7 +8,9 @@
     }],
     "description" : "Smartlook Web API client for PHP.",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
         "nette/di": "^2.3"
     },
     "autoload": {
