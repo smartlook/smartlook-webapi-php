@@ -9,11 +9,17 @@ namespace Smartlook\Webapi;
  * @method accountGet()
  * @method accountUpdate(array $params)
  * @method accountDelete(array $params)
+ * @method projectsGet(array $params)
+ * @method projectsList(array $params)
  * @method projectsCreate(array $params)
  * @method projectsUpdate(array $params)
+ * @method projectsDelete(array $params)
  * @method sessionsGet(array $params)
  * @method sessionsUpdate(array $params)
  * @method sessionsList(array $params)
+ * @method sessionsTag(array $params)
+ * @method sessionsShare(array $params)
+ * @method sessionsUnshare(array $params)
  */
 class Client
 {
