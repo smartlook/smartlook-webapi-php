@@ -73,7 +73,7 @@ class Client
 	{
 		$curl = curl_init($this->apiUrl . '/' . $method);
 
-		$headers = [];
+		$headers = array();
 		$headers[] = 'Content-Type: application/json';
 		foreach ($this->headers as $name => $value) {
 			$headers[] = "$name: $value";
