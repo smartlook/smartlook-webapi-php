@@ -5,21 +5,32 @@ namespace Smartlook\Webapi;
 /**
  * Class Client
  * @package Smartlook\Webapi
- * @method smartlookCreate(array $params)
- * @method accountGet()
- * @method accountUpdate(array $params)
- * @method accountDelete(array $params)
- * @method projectsGet(array $params)
- * @method projectsList(array $params)
- * @method projectsCreate(array $params)
- * @method projectsUpdate(array $params)
- * @method projectsDelete(array $params)
- * @method sessionsGet(array $params)
- * @method sessionsUpdate(array $params)
- * @method sessionsList(array $params)
- * @method sessionsTag(array $params)
- * @method sessionsShare(array $params)
- * @method sessionsUnshare(array $params)
+ * @method array signUp(array $params)
+ * @method array signIn(array $params)
+ * @method array apiTest(array $params = null)
+ * @method array accountGet()
+ * @method array accountUpdate(array $params)
+ * @method array accountDelete(array $params)
+ * @method array projectsList()
+ * @method array projectsGet(array $params)
+ * @method array projectsCreate(array $params)
+ * @method array projectsUpdate(array $params)
+ * @method array projectsDelete(array $params)
+ * @method array projectsFlush(array $params)
+ * @method array sessionsGet(array $params)
+ * @method array sessionsUpdate(array $params)
+ * @method array sessionsDelete(array $params)
+ * @method array sessionsDeleteBulk(array $params)
+ * @method array sessionsList(array $params)
+ * @method array sessionsTag(array $params)
+ * @method array sessionsShare(array $params)
+ * @method array sessionsUnshare(array $params)
+ * @method array restrictionsList(array $params)
+ * @method array restrictionsCreate(array $params)
+ * @method array restrictionsDelete(array $params)
+ * @method array memberUpdateEmail(array $params)
+ * @method array memberUpdatePassword(array $params)
+ * @method array memberRemoveProject(array $params)
  */
 class Client
 {
@@ -28,7 +39,7 @@ class Client
 	public $apiKey = null;
 
 	/** @var string */
-	public $apiUrl = 'https://www.getsmartlook.com/api';
+	public $apiUrl = 'https://www.smartlook.com/api';
 
 	/** @var array */
 	private $headers = array();
@@ -88,6 +99,7 @@ class Client
 		} else {
 			$values = $result ? json_decode($result, true) : array('ok' => true);
 			$values = $values === null ? array('ok' => true) : $values;
+			$values['ok'] = (bool)$values['ok'];
 			return $values;
 		}
 	}
@@ -95,9 +107,17 @@ class Client
 
 	public function __call($name, $arguments)
 	{
-		$method = strtolower(preg_replace('/[A-Z]/', '.$0', $name));
+		$method = $this->formatMethod($name);
 		$params = isset($arguments[0]) ? $arguments[0] : [];
 		return $this->call($method, $params);
+	}
+
+
+	public function formatMethod($name)
+	{
+		return preg_replace_callback('/^([a-z]+)([A-Z][a-zA-Z]+)/', function($matches) {
+			return $matches[1] . '.' . lcfirst($matches[2]);
+		}, $name);
 	}
 
 }

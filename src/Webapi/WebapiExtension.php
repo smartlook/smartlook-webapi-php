@@ -8,7 +8,7 @@ class WebapiExtension extends Nette\DI\CompilerExtension
 {
 
 	public $defaults = array(
-		'apiUrl' => 'https://www.getsmartlook.com/api',
+		'apiUrl' => 'https://www.smartlook.com/api',
 		'apiKey' => '',
 	);
 
