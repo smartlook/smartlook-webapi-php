@@ -1,5 +1,7 @@
 # smartlook-webapi-php
 
+[![Build Status](https://travis-ci.org/smartlook/smartlook-webapi-php.svg?branch=master)](https://travis-ci.org/smartlook/smartlook-webapi-php)
+
 Smartlook Web API client for PHP. 
 
 * [Web API documentation](https://www.smartlook.com/doc/web-api/)
