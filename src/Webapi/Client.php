@@ -108,7 +108,7 @@ class Client
 	public function __call($name, $arguments)
 	{
 		$method = $this->formatMethod($name);
-		$params = isset($arguments[0]) ? $arguments[0] : [];
+		$params = isset($arguments[0]) ? $arguments[0] : array();
 		return $this->call($method, $params);
 	}
 
