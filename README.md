@@ -4,8 +4,8 @@
 
 Smartlook Web API client for PHP. 
 
-* [Web API documentation](https://www.smartlook.com/doc/web-api/)
-* [Methods overview](https://www.smartlook.com/doc/methods/)
+- [Web API documentation](https://www.smartlook.com/doc/web-api/)
+- [Methods overview](https://www.smartlook.com/doc/methods/)
 
 
 ## Installation
@@ -25,10 +25,10 @@ $api->authenticate(YOUR_API_KEY);
 $response = $api->call(API_METHOD, API_PARAMS); // returns array
 ```
 
-* `API_METHOD` is method name, see [methods overview](https://www.smartlook.com/doc/methods/)
-* `API_PARAMS` is array of params
-* `$response` is always array
-* every response has property `ok`
+- `API_METHOD` is method name, see [methods overview](https://www.smartlook.com/doc/methods/)
+- `API_PARAMS` is array of params
+- `$response` is always array
+- every response has property `ok`
 
 
 ## Usage with [Nette](https://nette.org/en/)
@@ -48,3 +48,8 @@ smartlook:
 ```
 
 Then you have api connection as service available by DI.
+
+
+## Examples
+
+- [Create accounts with SignApi](examples/sign-api.php) 
